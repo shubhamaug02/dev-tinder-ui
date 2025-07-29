@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/constants';
@@ -11,14 +11,17 @@ const Login = () => {
   const [password, setPassword] = useState("Shubham@1234");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const user = useSelector(store => store.user);
 
   const handleClick = async () => {
     try {
-       const res = await axios.post(BASE_URL + '/login', {
-                emailId,
-                password
-        }, {withCredentials: true});
-        dispatch(addUser(res.data));
+        if(!user){
+                const res = await axios.post(BASE_URL + '/login', {
+                    emailId,
+                    password
+            }, {withCredentials: true});
+            dispatch(addUser(res.data));
+        }
         navigate('/');
     }
     catch(err){
