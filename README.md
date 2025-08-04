@@ -25,3 +25,12 @@
 - User should not allowed to access other routes without login.
 - If token is not prsent, redirect user to login page
 - Logout Feature
+- Edit Profile and User card on Feed
+- show toast message on save of profile
+
+- New Page - See all the connections for logedin user
+- New Page - See all the requests for the loggedin user
+- Feature - Accept/Reject Connection Request
+- Send the ignore/interested request from feed cards
+- Signup Page
+- E2E testing
