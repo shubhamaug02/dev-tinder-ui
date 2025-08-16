@@ -8,6 +8,11 @@ import Feed from "./components/Feed";
 import Logout from "./components/Logout";
 import Connections from "./components/Connections";
 import Requests from "./components/Requests";
+import TermsAndConditions from "./components/TermsAndConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import RefundPolicy from "./components/RefundPolicy";
+import ShippingPolicy from "./components/ShippingPolicy";
+import ContactUs from "./components/ContactUs";
 
 function App() {
 
@@ -22,6 +27,12 @@ function App() {
             <Route path="/logout" element={<Logout />} />
             <Route path="/connections" element={<Connections />}></Route>
             <Route path="/requests" element={<Requests />}></Route>
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/refund" element={<RefundPolicy />} />
+            <Route path="/shipping" element={<ShippingPolicy />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/refund" element={<RefundPolicy />} />
           </Route>
         </Routes>
       </BrowserRouter>
