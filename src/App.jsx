@@ -13,6 +13,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import RefundPolicy from "./components/RefundPolicy";
 import ShippingPolicy from "./components/ShippingPolicy";
 import ContactUs from "./components/ContactUs";
+import Premium from "./components/Premium";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/shipping" element={<ShippingPolicy />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/refund" element={<RefundPolicy />} />
+            <Route path="/premium" element={<Premium />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
