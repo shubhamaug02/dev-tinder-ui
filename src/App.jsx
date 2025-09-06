@@ -14,6 +14,7 @@ import RefundPolicy from "./components/RefundPolicy";
 import ShippingPolicy from "./components/ShippingPolicy";
 import ContactUs from "./components/ContactUs";
 import Premium from "./components/Premium";
+import Chat from "./components/Chat";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/refund" element={<RefundPolicy />} />
             <Route path="/premium" element={<Premium />}></Route>
+            <Route path="/chat/:targetUserId" element={<Chat />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
